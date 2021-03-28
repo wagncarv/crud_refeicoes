@@ -4,7 +4,7 @@ defmodule CrudRefeicoes.Repo.Migrations.Meal do
   def change do
     create table(:meal) do
       add :descricao, :string
-      add :calorias, :string
+      add :calorias, :integer
       add :data, :utc_datetime
 
       timestamps()
