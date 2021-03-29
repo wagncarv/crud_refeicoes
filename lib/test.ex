@@ -16,7 +16,7 @@ defmodule Test do
     # Get.by_id("7733301a-6690-4613-a972-757a08b9ee79")
     # Delete.call("7733301a-6690-4613-a972-757a08b9ee79")
     # ================================================
-       %{"id" => "3fa66ac1-aef6-4769-8a22-3cf49936b3b7", "descricao" => "abacaxi", "data" => DateTime.utc_now()}
-    |> Update.call()
+    #    %{"id" => "3fa66ac1-aef6-4769-8a22-3cf49936b3b7", "descricao" => "abacaxi", "data" => DateTime.utc_now()}
+    # |> Update.call()
   end
 end

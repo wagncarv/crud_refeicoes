@@ -1,9 +1,11 @@
 defmodule CrudRefeicoes do
-  @moduledoc """
-  CrudRefeicoes keeps the contexts that define your domain
-  and business logic.
+  alias CrudRefeicoes.Meal.Create, as: MealCreate
+  alias CrudRefeicoes.Meal.Delete, as: MealDelete
+  alias CrudRefeicoes.Meal.Update, as: MealUpdate
+  alias CrudRefeicoes.Meal.Get, as: MealGet
 
-  Contexts are also responsible for managing your data, regardless
-  if it comes from the database, an external API or others.
-  """
+  defdelegate create_meal(params), to: MealCreate, as: :call
+  defdelegate delete_meal(params), to: MealDelete, as: :call
+  defdelegate update_meal(params), to: MealUpdate, as: :call
+  defdelegate get_meal(id), to: MealGet, as: :by_id
 end
