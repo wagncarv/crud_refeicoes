@@ -4,8 +4,10 @@ defmodule CrudRefeicoes.Meal.Create do
   alias Ecto.Changeset
 
   def call(params) do
+    IO.inspect(params, label: "==============================================")
     params
     |> Meal.changeset()
+    |> IO.inspect(label: "==============================================")
     |> Repo.insert()
     |> handle_insert()
   end
@@ -20,20 +22,3 @@ defmodule CrudRefeicoes.Meal.Create do
 
   defp handle_insert({:ok, %Meal{}} = result), do: result
 end
-
-# defmodule Rockelivery.Users.Create do
-#   alias Rockelivery.{Error, User, Repo}
-
-#   def call(params) do
-#     params
-#     |> User.changeset()
-#     |> Repo.insert()
-#     |> handle_insert()
-#   end
-
-#   defp handle_insert({:ok, %User{}} = result), do: result
-
-#   defp handle_insert({:error, result}) do
-#     {:error, Error.build(:bad_request, result)}
-#   end
-# end

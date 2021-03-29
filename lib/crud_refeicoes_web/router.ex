@@ -7,6 +7,9 @@ defmodule CrudRefeicoesWeb.Router do
 
   scope "/api", CrudRefeicoesWeb do
     pipe_through :api
+
+    get "/", WelcomeController, :index
+    resources "/meal", MealController, except: [:new, :edit]
   end
 
   # Enables LiveDashboard only for development

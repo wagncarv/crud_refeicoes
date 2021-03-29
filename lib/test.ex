@@ -18,5 +18,10 @@ defmodule Test do
     # ================================================
     #    %{"id" => "3fa66ac1-aef6-4769-8a22-3cf49936b3b7", "descricao" => "abacaxi", "data" => DateTime.utc_now()}
     # |> Update.call()
+
+    # DateTime.utc_now()
+    date = DateTime.utc_now()
+    DateTime.truncate(date, :millisecond)
+
   end
 end

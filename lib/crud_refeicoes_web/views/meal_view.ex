@@ -1,4 +1,4 @@
-defmodule CrudRefeicoes.MealView do
+defmodule CrudRefeicoesWeb.MealView do
   use CrudRefeicoesWeb, :view
   alias CrudRefeicoes.Meal
 
