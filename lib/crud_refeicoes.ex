@@ -7,5 +7,5 @@ defmodule CrudRefeicoes do
   defdelegate create_meal(params), to: MealCreate, as: :call
   defdelegate delete_meal(params), to: MealDelete, as: :call
   defdelegate update_meal(params), to: MealUpdate, as: :call
-  defdelegate get_meal(id), to: MealGet, as: :by_id
+  defdelegate get_meal_by_id(id), to: MealGet, as: :by_id
 end
